@@ -1,0 +1,48 @@
+{
+  "name": "formgenie",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "zeriix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZeRiix/formgenie"
+  },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "default": {
+      "import": "./.build/index.mjs",
+      "require": "./.build/index.cjs",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "files": [
+    ".build",
+    "types",
+    "README.md"
+  ],
+  "scripts": {
+    "build:scripts": "rollup -c",
+    "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
+    "build": "npm run build:scripts && npm run build:types",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@duplojs/eslint": "^0.3.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/react": "^18.3.12",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.14.0",
+    "rollup": "^4.25.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tsc-alias": "^1.8.10",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "zod": "^3.23.8"
+  }
+}
