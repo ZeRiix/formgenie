@@ -77,7 +77,11 @@ export default [
 			"@typescript-eslint/no-unsafe-member-access": "off",
 			"@typescript-eslint/no-unsafe-argument": "off",
 		},
-		ignores: ["**/*.d.ts", ".build", "rollup.config.js", "eslint.config.js"],
+		files: ["**/*.ts", "**/*.tsx"],
+		ignores: [
+			"**/*.d.ts", 
+			"**/*.test.tsx",
+		],
 	},
 	{
 		...duploLint,
@@ -87,6 +91,11 @@ export default [
 			"@typescript-eslint/no-explicit-any": "off",
 		},
 		files: ["**/*.ts", "**/*.tsx"],
+		ignores: [
+			"**/*.js",
+			"**/*.d.ts",
+			"**/*.test.tsx",
+		],
 		languageOptions: {
 			parser: tsParser,
 			parserOptions: {

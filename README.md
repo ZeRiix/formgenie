@@ -4,7 +4,7 @@
   <img src="./logo.webp" alt="logo" weight="150px" width="150px" />
 </p>
 <p align="center">
-  <span style="font-size: 24px; font-weight: bold;">FormGenie</span>
+  <span style="font-size: 24px; font-weight: bold;">FormGenie React</span>
 </p>
 <p align="center">
   <a href="#">
@@ -13,17 +13,20 @@
   <a href="#">
     <img src="https://img.shields.io/badge/tsx-React-blue?logo=react&style=plastic" alt="lang" />
   </a>
-  <a href="https://www.npmjs.com/package/formgenie">
-    <img src="https://img.shields.io/npm/v/formgenie" alt="lib">
+  <a href="#">
+    <img src="https://img.shields.io/badge/coverage-95%25-green?style=plastic" alt="lang">
+  </a>
+  <a href="https://www.npmjs.com/package/formgenie-react">
+    <img src="https://img.shields.io/npm/v/formgenie-react" alt="lib">
   </a>
 </p>
 
-`formgenie` is a library that helps you to generate forms in React. It is a simple and easy-to-use library that allows you to create forms with minimal code.
+`formgenie-react` is a library that helps you to generate forms in React. It is a simple and easy-to-use library that allows you to create forms with minimal code.
 
 ## Installation
 
 ```bash
-npm install formgenie zod
+npm install formgenie-react zod
 ```
 
 # Usage
@@ -32,7 +35,7 @@ npm install formgenie zod
 
 ```tsx
 import React from 'react';
-import { useFormBuilder, usseInput, type GetRef } from 'formgenie';
+import { useFormBuilder, usseInput, type GetRef } from 'formgenie-react';
 import { z } from 'zod';
 ```
 
@@ -71,7 +74,7 @@ export function InputTest(
 > - `errorMessage`: the error message from the zod schema validation (optional)  
 
 > [!IMPORTANT]
-> For a component to be usable by `formgenie`, it must have at least the following properties:  
+> For a component to be usable by `formgenie-react`, it must have at least the following properties:  
 >   - `onChange`: a function that takes the input value as a parameter
 >   - `value`: the value of the input
 >   - `errorMessage`: the error message from the zod schema validation (optional)  
@@ -81,7 +84,7 @@ export function InputTest(
 ### 2. Create Form
 
 ```tsx
-import { useFormBuilder, useInput } from 'formgenie';
+import { useFormBuilder, useInput } from 'formgenie-react';
 import { z } from 'zod';
 import { InputTest } from './your/path/to/InputTest';
 
@@ -127,7 +130,7 @@ const Form = useFormBuilder({
 
 ```tsx
 import React, { useRef } from 'react';
-import type { GetRef } from 'formgenie';
+import type { GetRef } from 'formgenie-react';
 import { Form } from './your/path/to/Form';
 
 function TestForm() {
@@ -167,8 +170,8 @@ function TestForm() {
 >   - `submit`: which is an example of form submission  
 >   - `reset`: which is an example of form reset  
 >
-> To use a form created with **formgenie**, you need to give it a `ref` typed from the form.  
-> For this, **formgenie** exports a `GetRef` type that allows you to retrieve the type of the form's `ref`.
+> To use a form created with **formgenie-react**, you need to give it a `ref` typed from the form.  
+> For this, **formgenie-react** exports a `GetRef` type that allows you to retrieve the type of the form's `ref`.
 
 > [!IMPORTANT]
 > To access the form values, you can do so through the form's ref.  

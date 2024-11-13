@@ -116,6 +116,7 @@
 	"exclude": [
 		".build",
 		"rollup.config.js",
-		"eslint.config.js"
+		"vitest.config.js",
+		"eslint.config.js",
 	]
 }

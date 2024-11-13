@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`useBuilderForm > should return the correct template 1`] = `
+<DocumentFragment>
+  <form>
+    <div>
+      <label
+        for="Name"
+      >
+        Name
+      </label>
+      <input
+        name="Name"
+        placeholder="Type your name"
+        value=""
+      />
+      <p>
+        cc les amis
+      </p>
+    </div>
+    <div>
+      <label
+        for="Age"
+      >
+        Age
+      </label>
+      <input
+        placeholder="Type your age"
+        value="0"
+      />
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`useBuilderForm > test check error 1`] = `
+{
+  "name": undefined,
+}
+`;
+
+exports[`useBuilderForm > test check good 1`] = `
+{
+  "name": "test",
+}
+`;
+
+exports[`useBuilderForm > test check good without zodSchema 1`] = `
+{
+  "name": "test",
+}
+`;
+
+exports[`useBuilderForm > test default values 1`] = `"test"`;
+
+exports[`useBuilderForm > test edit values 1`] = `"test"`;
+
+exports[`useBuilderForm > test edit values 2`] = `"test"`;
+
+exports[`useBuilderForm > test reset 1`] = `"test"`;
+
+exports[`useBuilderForm > test reset 2`] = `"new value"`;
+
+exports[`useBuilderForm > test reset 3`] = `"new value"`;

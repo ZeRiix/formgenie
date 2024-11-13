@@ -148,9 +148,9 @@ export function useFormBuilder<
 				<form ref={formRef}>
 					{
 						inputEntries.map(
-							([name, Input], index) => (
+							([name, { Template }], index) => (
 								<div key={index}>
-									<Input.component
+									<Template
 										onChange={(value) => void setValues({
 											...values,
 											[name]: value,
